@@ -16,7 +16,7 @@
     height: 100%
   }
   body{
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTapfBtw_Ab39buwiFmHll9O1TXx4ZBoj_7lg&usqp=CAU');
+    background-color: rgb(22, 22, 63);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -48,11 +48,21 @@
     border-radius: 15px
   }
 
+
+  .container {
+    width: 190px;
+    height: 210px;
+    background: blue;
+  }
+
+  .data{
+    color: white;
+  }
   
 </style>
 <body>
   <nav>
-    <div><h1 class="heading">Hamid Weather Web App (Backend Project)</h1></div>
+    <div><h2 class="heading"> Overwatch | Weather App </h2></div>
   </nav>
   <br />
   <br />
@@ -68,13 +78,19 @@
         </div>
         </div>
         <form>
-    <div>
+    <div class="data">
         <h1>Location: {{city}}</h1>
-        <h3>Country Code: {{data.country_code}}</h1>
-        <h3>Temperature : {{data.temp}}</h3>
-        <h3>Humidity : {{data.humidity}}</h3>
-        <h3>Pressure :  {{data.pressure}}</h3>
-        <h3>Coordinate : {{data.coordinate}}</h3>
+        {% if error_message %}
+          <h4>{{error_message}}. <br> Try again</h4>
+
+          {% else %}
+          
+          <h3>Country Code: {{data.country_code}}</h1>
+          <h3>Temperature : {{data.temp}}</h3>
+          <h3>Humidity : {{data.humidity}}</h3>
+          <h3>Pressure :  {{data.pressure}}</h3>
+          <h3>Coordinate : {{data.coordinate}}</h3>
+        {% endif %}
         
     </div>
 </body>
