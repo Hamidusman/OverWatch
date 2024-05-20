@@ -1,1 +1,1 @@
-web gunicorn 
+web gunicorn overwatch.wsgi:application --log-file -
