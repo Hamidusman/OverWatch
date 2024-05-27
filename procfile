@@ -1,1 +1,1 @@
-web gunicorn overwatch.wsgi:application --log-file -
+web gunicorn weatherdetector.wsgi:application --log-file -

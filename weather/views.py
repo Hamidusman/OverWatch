@@ -25,3 +25,31 @@ def index(request):
       error_message = f"Error retrieving weather data: {e}"
 
   return render(request, 'index.html', {'data': data, 'city': city, 'error_message': error_message})
+
+
+
+'''  Hello, World!
+
+
+
+For the passed few days, I got involved on a handful of projects, ranging from web development, web scraping and automation. Most which will be showcased in the future. 
+
+
+
+But for now, I present to you OverWatch, essentially, a weather application. (Please, don't mind my subpar web design skills)
+
+
+
+This webapp makes use of the OpenWeather API to fetch accurate data on the temperature from all known locations. I also implemented an exception method, should the searched location be unreachable or nonexistent. (with Django btw)
+
+
+
+I worked on this project some time ago, when I initially learned about public APIs. Just made a few changes to it recently. This is the GitHub repository: https://github.com/Hamidusman/OverWatch (feel free to check out my way cooler projects 👀).
+
+
+
+There are tons of APIs out there. If there is a cool API you know of, I would be happy to know about it and possibly work with it.
+
+
+
+Danke :)'''
